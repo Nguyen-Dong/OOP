@@ -6,6 +6,42 @@ class BanDoc
 		string DiaChi;
 		string LoaiBD;	
 	public:
+		string getMaBD() 
+		{ 
+			return maBD; 
+		}
+		void setMaBD(string newMaBD) 
+		{
+	        this->maBD = newMaBD;
+	    }
+	    ////
+	    string getHoTen() 
+		{ 
+			return HoTen; 
+		}
+		void setHoTen(string newHoTen) 
+		{
+	        this->HoTen = newHoTen;
+	    }
+	    ////
+	    string getDiaChi() 
+		{ 
+			return DiaChi; 
+		}
+		void setDiaChi(string newDiaChi) 
+		{
+	        this->DiaChi = newDiaChi;
+	    }
+	    ////
+	    string getLoaiBD()
+		{ 
+			return LoaiBD; 
+		}
+		void setLoaiBD(string newLoaiBD) 
+		{
+	        this->LoaiBD = newLoaiBD;
+		}
+		////
 		void nhapBanDoc()
 		{
 			cout<<"Ma ban doc : ";
