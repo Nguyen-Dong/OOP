@@ -1,17 +1,25 @@
 class Sach
 {
 	private:
-		string maSach;
+		static int nextmaSach;
+		int maSach;
 		string TenSach;
 		string NXB;
 		long long Gia;
-		int NamXB; 
-	public:	
-		string getMaSach() 
+		int NamXB;
+	public:
+		//
+		Sach();
+		//
+		void nhapSach();
+		//
+		void hienThiThongTinSach();
+		//
+		int getMaSach() 
 		{ 
 			return maSach; 
 		}
-	    void setMaSach(string newMaSach) 
+	    void setMaSach(int newMaSach) 
 		{
 	        this->maSach = newMaSach;
 	    }
@@ -63,22 +71,4 @@ class Sach
 	            cout << "Nam khong hop le.\n";
 	        }
 	    }
-		void nhapSach()
-		{
-			cout<<"Ma Sach : ";
-		    cin>>maSach;
-		    cin.ignore();
-		    cout<<"Ten Sach: ";
-			getline(cin,TenSach);
-		    cout<<"Ten nha xuat ban : ";
-			getline(cin,this->NXB);
-			cout<<"Gia Ban : ";
-			cin>>this->Gia;
-		    cout<<"Nam XB : ";
-			cin>>this->NamXB;	
-		}
-		void hienThiThongTinSach()
-		{
-		    cout<<"Ma Sach: "<< maSach<<", "<<"Ten sach: "<< TenSach<<", "<<"Nha xuat ban: "<< NXB<<", "<<"Gia Ban: "<< Gia<<", "<<"Nam XB: "<< NamXB<<".\n";
-		}		
 };
