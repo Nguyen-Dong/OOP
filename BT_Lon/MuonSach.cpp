@@ -1,3 +1,5 @@
+#include"Sach.cpp"
+#include"BanDoc.cpp"
 class BangQLMuonSach
 {
 	private:
@@ -6,11 +8,21 @@ class BangQLMuonSach
 		date ngayMuon;
 		date ngayTra;
 	public:
-		
+		void setSach(Sach newSach)
+		{
+			s= newSach;
+		}
 		void NhapMuonSach(Sach a, BanDoc b)
 		{
 			s = a;
 			bd = b;
+		}
+		
+		void GoiBangSach()
+		{
+//			s.hienThiThongTinSach();
+			cout << setw(20) << left << s.getMaSach() << setw(20) << left << s.getTenSach() << setw(20) << left << s.getNXB();
+			cout << setw(20) << left << s.getGia() << setw(20) << left << s.getNamXB()<<"\n";
 		}
 			
 		void NhapNgayMuon()

@@ -6,7 +6,7 @@ class BanDoc
 		string HoTen;
 		string DiaChi;
 		string LoaiBD;
-		Sach ms;
+		
 	public:
 		BanDoc()
 		{

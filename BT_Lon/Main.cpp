@@ -5,12 +5,8 @@ using namespace std;
 #include<algorithm>
 #include<iomanip>
 #include"HamPhu.cpp"
-#include"Sach.cpp"
-#include"BanDoc.cpp"
 #include"date.cpp"
 #include"MuonSach.cpp"
-
-
 void ThemSach(vector<Sach> &sachList)
 {
 	int sls;
@@ -34,7 +30,7 @@ void HienThiSach(vector<Sach> sachList)
     }
 }
 
-void ThemBanDoc(vector<BanDoc> &banDocList)
+void ThemBanDoc(vector<BanDoc> &banDocList, vector<Sach> &sachList, vector<BangQLMuonSach> &muonsachList)
 {
 	int slb;
     cout << "Nhap so luong ban doc: ";
@@ -46,15 +42,27 @@ void ThemBanDoc(vector<BanDoc> &banDocList)
 		BanDoc temp;
 		temp.nhapBanDoc();
         banDocList.push_back(temp);
+        BangQLMuonSach l;
         int k;
-        cout<< "m co muon muon sach k:";
-        if(k == 1)
-        {
-        	HienThiSach.sachList[i].hienthiThongTinSach();
-        	BangQLMuonSach l;
-        	l.NhapNgayMuon();
-        	l.NhapNgayTra();
-		}
+	    cout<< "Ban co muon muon sach k(1. co, 2. khong):";
+	    cin>>k;
+	    if(k == 1)
+	        {
+	        	taokhungchoBDmuonSach();
+	        	for (int j = 0; j < sachList.size(); j++) 
+				{
+			        cout << setw(20) << left << sachList[j].getMaSach() << setw(20) << left << sachList[j].getTenSach();
+					cout << setw(20) << left << sachList[j].getGia() <<"\n";
+			    }
+			    int ms;
+			    cout<< "nhap STT:";
+			    cin>>ms;
+			    muonsachList[i].setSach(sachList[ms]);
+	        	muonsachList[i].NhapNgayMuon();
+	        	muonsachList[i].NhapNgayTra();
+			}
+		else
+			continue;
     }
 }
 void HienThiBanDoc(vector<BanDoc> banDocList)
@@ -65,10 +73,12 @@ void HienThiBanDoc(vector<BanDoc> banDocList)
         banDocList[i].hienThiThongTinBanDoc();
     }
 }
-void NhapBangMuonSach(vector<BangQLMuonSach> &muonsachList)
+void HienThiBangMuonSach(vector<BangQLMuonSach> &muonsachList)
 {
-	cout << muonsachList.size();
 	for(int i = 0; i < muonsachList.size(); i++)
+	{
+		muonsachList[i].hienThiThongTinMuonSach();
+	}
 }
 int Sach::nextmaSach = 10000;
 int BanDoc::nextmaBD = 20000;
@@ -97,7 +107,7 @@ int main()
 				ThemSach(sachList);
 				break;
 			case 2:
-				ThemBanDoc(banDocList);
+				ThemBanDoc(banDocList, sachList, muonsachList);
 				break;
 			case 3:
 				HienThiSach(sachList);
@@ -106,7 +116,7 @@ int main()
 				HienThiBanDoc(banDocList);
 				break;
 			case 5:
-				NhapBangMuonSach(muonsachList);
+				HienThiBangMuonSach(muonsachList);
 				break;
 				
 		}	
