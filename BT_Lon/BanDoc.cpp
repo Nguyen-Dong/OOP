@@ -1,17 +1,18 @@
 class BanDoc
 {
 	private:
-		static int nextmaBD; 
 		int maBD;
 		string HoTen;
 		string DiaChi;
 		string LoaiBD;
-		
 	public:
-		BanDoc()
+		void macdinh()
 		{
-			maBD = nextmaBD;
-			nextmaBD++;
+			maBD = 20000;
+		}
+		void tudongtang()
+		{
+			maBD++;
 		}
 		int getMaBD() 
 		{ 

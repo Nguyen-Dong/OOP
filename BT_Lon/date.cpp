@@ -49,7 +49,7 @@ class date
 		{
 			string s;
 			int i=0;
-			cin>>s;
+			cin>>s; cin.ignore();
 			do
 			{
 				this->ngay += s[i];
