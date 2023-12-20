@@ -67,7 +67,7 @@ void ThemBanDoc(vector<BanDoc> &banDocList, vector<Sach> &sachList, vector<BangQ
 				    	cout << "STT ban chon khong hop le!\n";
 				    	cout << "Moi nhap lai.\n";
 					}
-	        	}while( ms != -1);
+	        	}while(ms != -1);
 	        	l.NhapNgayMuon();
 	        	l.NhapNgayTra();
 	        	muonsachList.push_back(l);
@@ -98,9 +98,12 @@ void HienThiBanDoc(vector<BanDoc> banDocList)
 // so 5.
 void HienThiBangMuonSach(vector<BangQLMuonSach> &muonsachList)
 {
+	int stt = 0;
 	for(int i = 0; i < muonsachList.size(); i++)
 	{
+		cout << "STT: " << stt << "\n";
 		muonsachList[i].hienThiThongTinMuonSach();
+		stt++;
 	}
 }
 // so 6.
@@ -117,7 +120,39 @@ void timkiem(vector<BangQLMuonSach> &muonsachList)
 		}
 	}
 }
-
+// so 7.
+void xoa(vector<BangQLMuonSach> &muonsachList)
+{
+	int stt = 0;
+	for(int i = 0; i < muonsachList.size(); i++)
+	{
+		cout << "STT: " << stt;
+		muonsachList[i].hienThiThongTinMuonSach();
+		stt++;
+	}
+	string deleName;
+	cin.ignore();
+	int a;
+	cout << "Nhap ten ban muon xoa: "; getline(cin, deleName);
+	for (int i = 0; i < muonsachList.size(); i++)
+	{
+		if (muonsachList[i].getTenBD().getHoTen() == deleName)
+		{
+			a = i;
+		}
+	}
+	for (int j = a; j < muonsachList.size(); j++)
+	{
+		muonsachList[j] = muonsachList[j+1];
+	}
+	int Stt = 0;
+	for(int i = 0; i < muonsachList.size(); i++)
+	{
+		cout << "STT: " << Stt << "\n";
+		muonsachList[i].hienThiThongTinMuonSach();
+		Stt++;
+	}
+}
 int Sach::nextmaSach = 10000;
 int main()
 {
@@ -137,6 +172,7 @@ int main()
 		cout << "4. Hien thi ban doc\n";
 		cout << "5. Nhap thong tin vao bang muon sach\n";
 		cout << "6. Tim kiem ban doc\n";
+		cout << "7. Xoa ban doc\n";
 		cout << "Hay chon chuc nang ban muon: ";
 		cin >> n;
 		switch(n)
@@ -158,6 +194,9 @@ int main()
 				break;
 			case 6:
 				timkiem(muonsachList);
+				break;
+			case 7:
+				xoa(muonsachList);
 				break;
 				
 		}	

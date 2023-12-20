@@ -45,12 +45,12 @@ class BangQLMuonSach
 		void hienThiThongTinMuonSach()
 		{
 			
-		    cout << setw(10) << left << bd.getMaBD() << setw(20) << left << bd.getHoTen() << setw(20) << left << bd.getLoaiBD() << endl;
+		    cout << setw(20) << left << bd.getMaBD() << setw(20) << left << bd.getHoTen() << setw(20) << left << bd.getLoaiBD() << endl;
 		    cout << "=============================NHUNG SACH BAN DA MUON===================================";
 			cout << endl;
 		    for(int i = 0; i < s.size(); i++)
 			{
-		    	cout << s[i].getMaSach() << setw(10) << left << " " << s[i].getTenSach() << setw(20) << left << s[i].getGia();
+		    	cout << s[i].getMaSach() << setw(10) << left << " " << s[i].getTenSach();
 		    	cout << setw(10) << left << " " << ngayMuon.GetNgay() << "/" << ngayMuon.GetThang() << "/" << ngayMuon.GetNam();
 		    	cout << setw(10) << left << " " << ngayTra.GetNgay() << "/" << ngayTra.GetThang() << "/" << ngayTra.GetNam() << endl;
 			}
