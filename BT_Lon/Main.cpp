@@ -123,13 +123,6 @@ void timkiem(vector<BangQLMuonSach> &muonsachList)
 // so 7.
 void xoa(vector<BangQLMuonSach> &muonsachList)
 {
-	int stt = 0;
-	for(int i = 0; i < muonsachList.size(); i++)
-	{
-		cout << "STT: " << stt;
-		muonsachList[i].hienThiThongTinMuonSach();
-		stt++;
-	}
 	string deleName;
 	cin.ignore();
 	int a;
@@ -139,12 +132,14 @@ void xoa(vector<BangQLMuonSach> &muonsachList)
 		if (muonsachList[i].getTenBD().getHoTen() == deleName)
 		{
 			a = i;
+			break;
 		}
 	}
-	for (int j = a; j < muonsachList.size(); j++)
+	for (int j = a; j < muonsachList.size() - 1; j++)
 	{
 		muonsachList[j] = muonsachList[j+1];
 	}
+	muonsachList.resize(muonsachList.size() - 1);
 	int Stt = 0;
 	for(int i = 0; i < muonsachList.size(); i++)
 	{
@@ -197,10 +192,10 @@ int main()
 				break;
 			case 7:
 				xoa(muonsachList);
-				break;
-				
+				break;	
 		}	
 	}while(n!=0);
 	system("pause");
+	
     return 0;
 }

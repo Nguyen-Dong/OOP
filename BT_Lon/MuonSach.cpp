@@ -19,12 +19,6 @@ class BangQLMuonSach
 			s = newSach;
 		}
 		
-//		void NhapMuonSach(vector<Sach> a, BanDoc b)
-//		{
-//			s = a;
-//			bd = b;
-//		}
-		
 		BanDoc getTenBD()
 		{
 			return bd;
