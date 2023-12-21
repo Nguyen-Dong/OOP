@@ -50,19 +50,19 @@ class BanDoc
 	        this->LoaiBD = newLoaiBD;
 		}
 		
-void nhapBanDoc()
-{
-	cout << setw(8) << left << " ";
-	cout << "Ho Ten : "; getline(cin, this->HoTen);
-	cout << setw(8) << left << " ";
-	cout << "Dia chi : "; getline(cin, this->DiaChi);
-	cout << setw(8) << left << " ";
-	cout << "Loai Ban Doc : "; getline(cin, this->LoaiBD);
-}
-void hienThiThongTinBanDoc()
-{
-	cout << setw(20) << left << maBD << setw(20) << left << HoTen;
-	cout << setw(20) << left << DiaChi  << setw(20) << left << LoaiBD << "\n";
-}	
+		void nhapBanDoc()
+		{
+			cout << setw(8) << left << " ";
+			cout << "Ho Ten : "; getline(cin, this->HoTen);
+			cout << setw(8) << left << " ";
+			cout << "Dia chi : "; getline(cin, this->DiaChi);
+			cout << setw(8) << left << " ";
+			cout << "Loai Ban Doc : "; getline(cin, this->LoaiBD);
+		}
+		void hienThiThongTinBanDoc()
+		{
+			cout << setw(20) << left << maBD << setw(20) << left << HoTen;
+			cout << setw(20) << left << DiaChi  << setw(20) << left << LoaiBD << "\n";
+		}	
 };
 

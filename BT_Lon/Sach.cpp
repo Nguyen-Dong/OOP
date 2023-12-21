@@ -70,23 +70,23 @@ class Sach
 	        }
 	    }
 	    
-void nhapSach()
-{
-	cout << setw(8) << left << " ";
-	cout << "Ten Sach: "; getline(cin, TenSach);
-	cout << setw(8) << left << " ";
-	cout << "Ten NXB : "; getline(cin, this->NXB);
-	cout << setw(8) << left << " ";
-	cout << "Gia Ban : "; cin >> this-> Gia;
-	cout << setw(8) << left << " ";
-	cout << "Nam XB : "; cin >> this-> NamXB;	
-	cin.ignore();
-}
-void hienThiThongTinSach()
-{
-	cout << setw(20) << left << maSach << setw(20) << left << TenSach << setw(20) << left << NXB;
-	cout << setw(20) << left << Gia << setw(20) << left << NamXB<<"\n";
-}		
+		void nhapSach()
+		{
+			cout << setw(8) << left << " ";
+			cout << "Ten Sach: "; getline(cin, TenSach);
+			cout << setw(8) << left << " ";
+			cout << "Ten NXB : "; getline(cin, this->NXB);
+			cout << setw(8) << left << " ";
+			cout << "Gia Ban : "; cin >> this-> Gia;
+			cout << setw(8) << left << " ";
+			cout << "Nam XB : "; cin >> this-> NamXB;	
+			cin.ignore();
+		}
+		void hienThiThongTinSach()
+		{
+			cout << setw(20) << left << maSach << setw(20) << left << TenSach << setw(20) << left << NXB;
+			cout << setw(20) << left << Gia << setw(20) << left << NamXB<<"\n";
+		}		
 };
 
 

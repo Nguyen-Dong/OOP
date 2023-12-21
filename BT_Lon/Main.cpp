@@ -7,7 +7,7 @@ using namespace std;
 #include"HamPhu.cpp"
 #include"date.cpp"
 #include"MuonSach.cpp"
-// so 1.
+// so 1. them sach moi
 void ThemSach(vector<Sach> &sachList)
 {
 	int sls;
@@ -22,7 +22,7 @@ void ThemSach(vector<Sach> &sachList)
         sachList.push_back(temp);
     }
 }
-// so 2.
+// so 2. them ban doc
 void ThemBanDoc(vector<BanDoc> &banDocList, vector<Sach> &sachList, vector<BangQLMuonSach> &muonsachList)
 {
 	int slb;
@@ -77,7 +77,7 @@ void ThemBanDoc(vector<BanDoc> &banDocList, vector<Sach> &sachList, vector<BangQ
 		
     }
 }
-// so 3.
+// so 3. hien thi ra nhung quyen sach da nhap 
 void HienThiSach(vector<Sach> sachList)
 {
     taokhungchobangsach();
@@ -86,7 +86,7 @@ void HienThiSach(vector<Sach> sachList)
         sachList[i].hienThiThongTinSach();
     }
 }
-// so 4.
+// so 4. hien thi ra nhung ban doc da nhap
 void HienThiBanDoc(vector<BanDoc> banDocList)
 {
 	taokhungchobangbandoc();
@@ -95,7 +95,7 @@ void HienThiBanDoc(vector<BanDoc> banDocList)
         banDocList[i].hienThiThongTinBanDoc();
     }
 }
-// so 5.
+// so 5. de xem nhung ban doc nao muon nhung quyen sach nao
 void HienThiBangMuonSach(vector<BangQLMuonSach> &muonsachList)
 {
 	int stt = 0;
@@ -106,7 +106,7 @@ void HienThiBangMuonSach(vector<BangQLMuonSach> &muonsachList)
 		stt++;
 	}
 }
-// so 6.
+// so 6. tim ten ban doc ma ban muon tim
 void timkiem(vector<BangQLMuonSach> &muonsachList)
 {
 	string namefind;
@@ -120,7 +120,7 @@ void timkiem(vector<BangQLMuonSach> &muonsachList)
 		}
 	}
 }
-// so 7.
+// so 7. xoa ten ban doc can xoa
 void xoa(vector<BangQLMuonSach> &muonsachList)
 {
 	string deleName;
